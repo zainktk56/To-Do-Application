@@ -8,234 +8,247 @@
     <link rel="icon" type="image/x-icon" href="./icon.png">
     <style>
         @font-face {
-    font-family: poppins;
-    src: url(./Poppins/Poppins-Regular.ttf);
-}
+            font-family: poppins;
+            src: url(./Poppins/Poppins-Regular.ttf);
+        }
 
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-}
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-body{
-    font-family:poppins;
-    background:#f5f5f5;
-    padding:20px;
-    color: #1F2937;
-}
+        body {
+            font-family: poppins;
+            background: #f5f5f5;
+            padding: 20px;
+            color: #1F2937;
+        }
 
-h1{
-    text-align:center;
-    margin-bottom:15px;
-}
+        /* Header */
+        h1 {
+            text-align: center;
+            margin-bottom: 15px;
+        }
 
-hr{
-    margin-bottom:30px;
-}
+        hr {
+            margin-bottom: 30px;
+        }
 
-.main{
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    gap:15px;
-    flex-wrap:wrap;
-}
+        /* MAIN LAYOUT */
+        .main {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 15px;
+            flex-wrap: wrap;
+            max-width: 900px;
+            margin: auto;
+        }
 
-.card1{
-    flex:1;
-    min-width:250px;
-    max-width:600px;
-}
+        .card1 {
+            flex: 1;
+            min-width: 250px;
+        }
 
-.card2{
-    flex-shrink:0;
-}
+        .card2 {
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+        }
 
-input{
-    width:100%;
-    padding:12px;
-    border-radius:10px;
-    border:1px solid gray;
-    font-size:17px;
-    font-family:poppins;
-}
+        /* INPUT */
+        input {
+            width: 100%;
+            padding: 12px;
+            border-radius: 10px;
+            border: 1px solid gray;
+            font-size: 17px;
+            font-family: poppins;
+        }
 
-#add_btn{
-    width:180px;
-    padding:12px;
-    border:none;
-    border-radius:10px;
-    background:#02131f;
-    color:white;
-    cursor:pointer;
-    font-family:poppins;
-    transition:.3s;
-}
+        /* BUTTONS */
+        #add_btn,
+        #clearall {
+            width: 180px;
+            padding: 12px;
+            border: none;
+            border-radius: 10px;
+            color: white;
+            cursor: pointer;
+            font-family: poppins;
+            transition: 0.3s;
+        }
 
-#add_btn:hover{
-    background:#063655;
-}
+        #add_btn {
+            background: #02131f;
+        }
 
-#clearall{
-     width:180px;
-    padding:12px;
-    border:none;
-    border-radius:10px;
-    background:#EF4444;
-    color:white;
-    cursor:pointer;
-    font-family:poppins;
-    transition:.3s;
-}
+        #add_btn:hover {
+            background: #063655;
+        }
 
-.ul{
-    width:900px;
-    max-width:900px;
-    margin:30px auto;
-    background:#001010;
-    border-radius:20px;
-    padding:20px;
-    min-height:300px;
-}
+        #clearall {
+            background: #EF4444;
+        }
 
-#lists{
-    list-style:none;
-}
+        /* LIST CONTAINER */
+        .ul {
+            width: 100%;
+            max-width: 900px;
+            margin: 30px auto;
+            background: #001010;
+            border-radius: 20px;
+            padding: 20px;
+            min-height: 300px;
+        }
 
-#lists li{
-    background:white;
-    color:black;
-    padding:15px;
-    border-radius:12px;
-    margin-bottom:15px;
-}
+        #lists {
+            list-style: none;
+        }
 
-.btnmain{
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-    gap:20px;
-    flex-wrap:wrap;
-}
+        #lists li {
+            background: white;
+            color: black;
+            padding: 15px;
+            border-radius: 12px;
+            margin-bottom: 15px;
+        }
 
-.btnmain span{
-    flex:1;
-    word-break:break-word;
-}
+        /* TASK ROW */
+        .btnmain {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
 
-.btnmain h3{
-    font-size:18px;
-}
+        .btnmain span {
+            flex: 1;
+            word-break: break-word;
+        }
 
-.btnmain div{
-    display:flex;
-    gap:10px;
-}
+        .btnmain h3 {
+            font-size: 18px;
+        }
 
-#delete,
-#edit{
-    border:none;
-    color:white;
-    border-radius:8px;
-    padding:10px 22px;
-    cursor:pointer;
-    font-family:poppins;
-    transition:.3s;
-}
+        .btnmain div {
+            display: flex;
+            gap: 10px;
+        }
 
-#delete{
-    background:#EF4444;
-}
+        /* ACTION BUTTONS */
+        #delete,
+        #edit {
+            border: none;
+            color: white;
+            border-radius: 8px;
+            padding: 10px 22px;
+            cursor: pointer;
+            font-family: poppins;
+            transition: 0.3s;
+        }
 
-#delete:hover{
-    background:#d63a3a;
-}
+        #delete {
+            background: #EF4444;
+        }
 
-#edit{
-    background:#22C55E
-;
-}
+        #delete:hover {
+            background: #d63a3a;
+        }
 
-#edit:hover{
-    background:#18b526;
-}
-p{
-    text-align: center;
-}
-/* =================== */
-/* Tablet */
-/* =================== */
+        #edit {
+            background: #22C55E;
+        }
 
-@media(max-width:768px){
+        #edit:hover {
+            background: #18b526;
+        }
 
-    .main{
-        flex-direction:column;
-    }
+        p {
+            text-align: center;
+        }
 
-    .card1,
-    .card2{
-        width:100%;
-    }
+        /* =================== */
+        /* TABLET */
+        /* =================== */
+        @media (max-width: 768px) {
 
-    #add_btn{
-        width:100%;
-    }
+            body {
+                padding: 15px;
+            }
 
-    .btnmain{
-        flex-direction:column;
-        align-items:flex-start;
-    }
+            .main {
+                flex-direction: column;
+                align-items: stretch;
+            }
 
-    .btnmain div{
-        width:100%;
-        justify-content:space-between;
-    }
+            .card2 {
+                justify-content: space-between;
+                width: 100%;
+            }
 
-    #delete,
-    #edit{
-        width:48%;
-    }
+            #add_btn,
+            #clearall {
+                width: 48%;
+            }
 
-}
+            .btnmain {
+                flex-direction: column;
+                align-items: flex-start;
+            }
 
-/* =================== */
-/* Mobile */
-/* =================== */
+            .btnmain div {
+                width: 100%;
+                justify-content: space-between;
+            }
 
-@media(max-width:480px){
+            #delete,
+            #edit {
+                width: 48%;
+            }
+        }
 
-    body{
-        padding:15px;
-    }
+        /* =================== */
+        /* MOBILE */
+        /* =================== */
+        @media (max-width: 480px) {
 
-    h1{
-        font-size:30px;
-    }
+            h1 {
+                font-size: 26px;
+            }
 
-    input{
-        font-size:16px;
-    }
+            input {
+                font-size: 16px;
+            }
 
-    .ul{
-        padding:15px;
-    }
+            #add_btn,
+            #clearall {
+                width: 100%;
+            }
 
-    .btnmain h3{
-        font-size:16px;
-    }
+            .card2 {
+                flex-direction: column;
+            }
 
-    .btnmain div{
-        flex-direction:column;
-        width:100%;
-    }
+            .btnmain div {
+                flex-direction: column;
+            }
 
-    #delete,
-    #edit{
-        width:100%;
-    }
+            #delete,
+            #edit {
+                width: 100%;
+            }
 
-}
+            .ul {
+                padding: 15px;
+            }
+
+            .btnmain h3 {
+                font-size: 16px;
+            }
+        }
     </style>
 </head>
 
@@ -245,7 +258,7 @@ p{
     <hr>
     <div class="main">
         <div class="card1">
-            <input type="text" placeholder="Enter Task Here"  name="" id="input">
+            <input type="text" placeholder="Enter Task Here" name="" id="input">
         </div>
         <div class="card2">
             <button id="add_btn" onclick="add_item()">Add task</button>
@@ -254,15 +267,15 @@ p{
     </div>
 
     <div class="ul">
-        
+
         <ul id="lists">
-            
+
         </ul>
     </div>
-        <footer>
+    <footer>
         <hr>
-        
-        <p>&copy; 2026 To Do Web App  | Developed by Muhammad Zain </p>
+
+        <p>&copy; 2026 To Do Web App | Developed by Muhammad Zain </p>
     </footer>
 
 
